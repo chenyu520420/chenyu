@@ -140,9 +140,11 @@
 				</ul>
 			</div>
 			<a href="" id="shoopcar"></a>
-			<span id="shoopcar2">
+			<a href="">
+				<button id="shoopcar2">
 				去购物车结算<b>(0)</b>
-			</span>
+				</button>
+			</a>
 		</div>
 	</div>
 	<!--------------------->
@@ -762,11 +764,9 @@
 		<div class="banner_con6 banner_con"></div>	
 		<div class="banner_con7 banner_con"></div>	
 		<a href="">
-			<span class="prev"></span>
-			<span class="next"></span>
 			<span class="AD"></span>
 			<ul id="ban_ul" style="z-index: 100">
-				<li></li>
+				<li class="ban_li1"></li>
 				<li></li>
 				<li></li>
 				<li></li>
@@ -774,7 +774,10 @@
 				<li></li>
 				<li></li>
 			</ul>
-		</a>
+		</a>	
+		<span class="prev"></span>
+		<span class="next"></span>
+		
 	</div>
 	<!------------>
 	<script type="text/javascript">
@@ -813,6 +816,344 @@
 				$('.banner_con:eq('+ban_i+')').animate({opacity:1});
  			}
 		}
-		
+		$('.prev').click(function(e){
+			console.log(1);
+			e.stopPropagation();
+			if(ban_i==0){
+				ban_i=6
+			}else{
+				ban_i=ban_i-1;	
+			}
+			clearInterval(timer);
+			$('.banner>a>ul>li').css({
+				'background':"#000",
+				'opacity':0.4
+			});
+			$('.banner_con:eq('+ban_i+')').siblings('div').animate({opacity:0});
+			$('.banner>a>ul>li:eq('+ban_i+')').css('background','#D70057');
+			$('.banner>a>ul>li:eq('+ban_i+')').css('opacity','1');
+			$('.banner_con:eq('+ban_i+')').animate({opacity:1});
+			timer=setInterval(a,3000);
+		})
+		$('.next').click(function(e){
+			e.stopPropagation();
+			a();
+		})
 	</script>
+	<!---------public------------->
+	<div class="public">
+		<div class="public_con">
+			<img src="img/ad_5.png" alt="" />
+		</div>
+	</div>
+	<!-----------brand----------->
+	<div class="brand">
+		<div class="brand_con">
+			<a href=""><img src="img/15a959617cb0dc7802db41d93c758923.jpg" alt="" /></a>
+			<a href=""><img src="img/79ee9f430dfd13b990cd211547525441.jpg" alt="" /></a>
+			<a href=""><img src="img/14ff119a643db529a889fd00d59b8776.jpg" alt="" /></a>
+			<a href=""><img src="img/c0a5a52354ba4fb3e2911a4e620484da.png" alt="" /></a>
+			<a href=""><img src="img/f9536992d83841980c4bb6bdaf7c2bed.jpg" alt="" /></a>
+			<a href=""><img src="img/5b53b64d19d31fba4870396f5a6f3f15.jpg" alt="" /></a>
+			<a href=""><img src="img/16cf682b4218e862a84901163ca7409b.jpg" alt="" /></a>
+			<a href=""><img src="img/e26e8182fbd6022bf65eb849e38fe982.jpg" alt="" /></a>
+			<a href=""><img src="img/7b27eb5791e0ec5d57f6f55338ba7a46.jpg" alt="" /></a>
+			<a href=""><img src="img/50914de9daeb0112a84387487d4a4b24.png" alt="" /></a>
+			<a href=""><img src="img/f27f2d7649268073ed83418ec7daacd2.jpg" alt="" /></a>
+			<a href=""><img src="img/8e05c150a1d2c5d3f38900e30b73990a.png" alt="" /></a>
+			<a href=""><img src="img/742933f52cb762a70272e56e6fceb7af.jpg" alt="" /></a>
+			<a href=""><img src="img/faae5a6edffc2ca5c6f8e3c5b987a5d3.png" alt="" /></a>
+			<a href=""><img src="img/de2c9ae5df1b2697fde17748b92a81b2.jpg" alt="" /></a>
+			<a href=""><img src="img/f673179e4b8f01876419bd95cc4b069a.jpg" alt="" /></a>
+			<a href=""><img src="img/fe6db391378a9cf13cebb09ac606ad43.png" alt="" /></a>
+			<a href=""><img src="img/901db0ed2525e0eaa3f9777dbe71d25d.png" alt="" /></a>
+			<a href=""><img src="img/0ddd648e343bc352d273813e2235514c.png" alt="" /></a>
+			<a href=""><img src="img/5d70672fc07057d18d2d8556d12854fb.png" alt="" /></a>
+			<a href=""><img src="img/a91be932851aae4c33ef7daafa0b6f37.png" alt="" /></a>
+			<a href=""><img src="img/2417b5ba04152d39f2731e005c61b608.png" alt="" /></a>
+			<a href=""><img src="img/746f53652e2c52de598a185b53511deb.png" alt="" /></a>
+			<a href=""><img src="img/67de767ae7d9238bf6f59b5a37b5b13e.png" alt="" /></a>
+			<a href=""><img src="img/a62b07b87986914e495e0333ea5b6cd8.png" alt="" /></a>
+			<a href=""><img src="img/f8e5933a3aa97d2ec57be804f258e73a.png" alt="" /></a>
+			<a href=""><img src="img/49df4eba05c80fd3ca00a45201397bc0.png" alt="" /></a>
+			<a href=""><img src="img/4cb6718fe7b18d0c40e430f4566728f9.png" alt="" /></a>
+			<a href=""><img src="img/22d3dd822aaffc7d0294ca7ba26c7ae1.png" alt="" /></a>
+			<a href=""><img src="img/b8f5635bad0aee6ca0e023f8be96f2f1.jpg" alt="" /></a>
+			<a href=""><img src="img/522ff5a082e2cef7e0478d0df3d33a85.png" alt="" /></a>
+			<a href=""><img src="img/175c3df16413fed88ee91ad051bd090c.jpg" alt="" /></a>
+			<a href=""><img src="img/c58ee447acc81b2a6cda8550dccdf63f.jpg" alt="" /></a>
+			<a href=""><img src="img/979169ae7274ad74508ebf72f6e07f4a.png" alt="" /></a>
+			<a href=""><img src="img/23f0f5307762448d764bf457a6924272.jpg" alt="" /></a>
+			<a href=""><img src="img/allbrand.png" alt="" /></a>
+		</div>
+	</div>
+	<!-------show--------->
+	<div class="show">
+		<div class="show_con">
+		</div>
+	</div>
+	<script type="text/javascript">
+		var jp=[
+			{'href':"",'src':"img/2621adbf92cfbd5efb43acff5c4d5681.jpg",'h3':"运动鞋任选",'h4':"好价不怕比",'h5':"1.8折起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/1e88256922ad67b1a14b4c583ea9a8b0.jpg",'h3':"劲价专区",'h4':"全品类",'h5':"低至1.9折",'dat':'2017-1-1'},
+			{'href':"",'src':"img/3de49be3c0655941ac8261f33cf17ef2.jpg",'h3':"运动鞋服全品类",'h4':"好价继续",'h5':"1折起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/3f661dbd522611333bec3936d7be59d2.jpg",'h3':"全品类爆款返场",'h4':"清仓价",'h5':"1.8折起",'dat':'2017-1-1'},
+			{'href':"",'src':"img/6af13c28175fc90c25cdf4444a9ad38f.jpg",'h3':"新品轰趴",'h4':"全线秋冬鞋服",'h5':"149元起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/8aaa53504070ddf98cd43c2a24a76c4b.jpg",'h3':"嗨购不停",'h4':"全品类",'h5':"99元封顶",'dat':'2017-1-1'},
+			{'href':"",'src':"img/47ca333c89d04427fd34cb0274c7a3c3.jpg",'h3':"探路者同价位买二2免1",'h4':"狂high到底",'h5':"99元2件起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/add32fc4d321989bf448ae0ba62b03ed.jpg",'h3':"马克华菲狂欢专场",'h4':"御寒冬装 特惠加持",'h5':"99元起",'dat':'2017-1-1'},
+			{'href':"",'src':"img/80566f4ca3f1d4f5b1ee022c0c802814.jpg",'h3':"全家总动员",'h4':"每满199减50元可累计",'h5':"99元起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/38634ed2262e34b43c69374800210aa1.jpg",'h3':"尖货上新",'h4':"好价不停",'h5':"2.8折起",'dat':'2017-1-1'},
+			{'href':"",'src':"img/33387fb43fd686df2bdf6f72a3b31e7d.jpg",'h3':"秋冬系列",'h4':"复刻经典",'h5':"39元起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/b95be8537396bf46c2a7d80fc33c2afc.jpg",'h3':"驾驭冬季运动",'h4':"新品特惠",'h5':"279元起",'dat':'2017-1-1'},
+			{'href':"",'src':"img/bdfbb95c993cc4ced7657f183a00a9f5.jpg",'h3':"断码清仓",'h4':"好货捡漏",'h5':"3折封顶",'dat':'2017-02-14'},
+			{'href':"",'src':"img/cbb605da91344192e4458ee54039cc57.jpg",'h3':"狼爪好价继续",'h4':"3折封顶",'h5':"满2件8折",'dat':'2017-1-1'},
+			{'href':"",'src':"img/d0dc681ec0ecf34006bd4737fcc3ddcf.jpg",'h3':"Lee品牌专场",'h4':"牛仔经典 型格暖冬",'h5':"49元起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/d1469fbff7f08d202c3430eb9758597a.jpg",'h3':"乐斯菲斯满399减50",'h4':"满699减100满999减200",'h5':"5折封顶",'dat':'2017-1-1'},
+			{'href':"",'src':"img/df5b0a6a16617e2f167f3fe00ac90d02.jpg",'h3':"鞋服TOP款",'h4':"全品牌",'h5':"3折起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/df9d899824f4dee20476561316954e80.jpg",'h3':"我们来拼单",'h4':"同价位凑单",'h5':"第二双一百元",'dat':'2017-1-1'},
+			{'href':"",'src':"img/e7b3d53fbbf2ed50dfc0fb35bbdba772.jpg",'h3':"美特斯邦威",'h4':"秋冬优选 狂欢特惠",'h5':"49元起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/e9e4fd4b8c6a345fa069813b48d8f1c7.jpg",'h3':"鞋服专场",'h4':"国产品牌",'h5':"29-199",'dat':'2017-1-1'},
+			{'href':"",'src':"img/f7a58978ce940c7c11edaa784cb41ca9.jpg",'h3':"爱乐帅气出行",'h4':"任意搭",'h5':"299元2双",'dat':'2017-02-14'},
+			{'href':"",'src':"img/ffb8fa813ef91df86c1b4876282552b6.jpg",'h3':"好价继续",'h4':"添柏岚补货",'h5':"5折封顶",'dat':'2017-1-1'},
+			{'href':"",'src':"img/2621adbf92cfbd5efb43acff5c4d5681.jpg",'h3':"运动鞋任选",'h4':"好价不怕比",'h5':"1.8折起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/1e88256922ad67b1a14b4c583ea9a8b0.jpg",'h3':"劲价专区",'h4':"全品类",'h5':"低至1.9折",'dat':'2017-1-1'},
+			{'href':"",'src':"img/2621adbf92cfbd5efb43acff5c4d5681.jpg",'h3':"运动鞋任选",'h4':"好价不怕比",'h5':"1.8折起",'dat':'2017-02-14'},
+			{'href':"",'src':"img/1e88256922ad67b1a14b4c583ea9a8b0.jpg",'h3':"劲价专区",'h4':"全品类",'h5':"低至1.9折",'dat':'2017-1-1'},
+		]
+		for(var i=0;i<jp.length;i++){
+			sh(jp[i].href,jp[i].src,jp[i].h3,jp[i].h4,jp[i].h5,jp[i].dat)
+		}
+
+		function sh(ohref,osrc,oh3,oh4,oh5,ot){
+			var show_con=document.getElementsByClassName("show_con")[0];
+			var shows=document.createElement("a");
+			shows.href=ohref;
+			shows.className="shows";
+			show_con.appendChild(shows);
+			var shows_img=document.createElement("img");
+			shows_img.src=osrc;
+			shows.appendChild(shows_img);
+			var shows_h3=document.createElement("h3");
+			shows_h3.className="shows_h3";
+			shows_h3.innerHTML=oh3;
+			shows.appendChild(shows_h3);
+			var shows_h4=document.createElement("h4");
+			shows_h4.className="shows_h4";
+			shows_h4.innerHTML=oh4;
+			shows.appendChild(shows_h4);
+			var shows_h5=document.createElement("h5");
+			shows_h5.className="shows_h5";
+			shows_h5.innerHTML=oh5;
+			shows.appendChild(shows_h5);
+			var shows_p=document.createElement("p");
+			shows_p.className="shows_p";
+			shows.appendChild(shows_p);
+			var span_day=document.createElement("span");
+			span_day.className="shows_span days";
+			shows_p.appendChild(span_day);
+			var shows_i=document.createElement("i");
+			shows_i.className="shows_i";
+			span_day.appendChild(shows_i);
+			var days=document.createElement("span");
+			days.innerHTML="天";
+			span_day.appendChild(days);
+			var span_hour=span_day.cloneNode(true);
+			span_hour.children[1].innerHTML="时";
+			shows_p.appendChild(span_hour);
+			var span_minu=span_day.cloneNode(true);
+			span_minu.children[1].innerHTML="分";
+			shows_p.appendChild(span_minu);
+			var span_sec=span_day.cloneNode(true);
+			span_sec.children[1].innerHTML="秒";
+			shows_p.appendChild(span_sec);
+			var span_msec=span_day.cloneNode(true);
+			span_msec.children[1].innerHTML="";
+			shows_p.appendChild(span_msec);
+			setInterval(function(){
+				var arr=countDown(ot);
+				shows_i.innerHTML=arr[0];
+				span_hour.children[0].innerHTML=arr[1];
+				span_minu.children[0].innerHTML=arr[2];
+				span_sec.children[0].innerHTML=arr[3];
+				span_msec.children[0].innerHTML=arr[4];
+			
+			},1)
+		}
+		function countDown(ot){
+			var dead = new Date(ot);
+			var timer = dead.getTime() - new Date().getTime();
+			var day = Math.floor(timer/(3600000*24))
+			var hour = Math.floor(timer%(3600000*24)/3600000);
+			var minu=Math.floor(timer%(3600000*24)%3600000/60000)
+			var sec =Math.floor(timer%(3600000*24)%3600000%60000/1000);
+			var msec=Math.floor(timer%(3600000*24)%3600000%60000%1000/100)
+			var a=[day,hour,minu,sec,msec]
+			return  a
+		}
+	</script>
+	<!-----ADmid------->
+	<div class="ADmid">
+			<img src="img/78c66b35ad65dbce337032dd54762dde.jpg" alt="" />
+	</div>
+	<!-----showBot------>
+	<div class="showBot">
+		<div class="showBot_con">
+		</div>
+		<div class="showBot_con2"></div>
+	</div>
+	<script type="text/javascript">
+		var jpd=[
+			{'href':"",'src':"img/3a9e05e4bb6b436d20d2e5e0afb2db67.jpg",'h3':"运动鞋任选",'h4':"好价不怕比",'dat':'2017-02-14'},
+			{'href':"",'src':"img/6ee0ad0cf2aa3bb61a73bf50f7fde3b4.jpg",'h3':"劲价专区",'h4':"全品类",'dat':'2017-1-1'},
+			{'href':"",'src':"img/7b2ebb72456cc01047957b5a342637c3.jpg",'h3':"运动鞋服全品类",'h4':"好价继续",'dat':'2017-02-14'},
+			{'href':"",'src':"img/14d49a4c944630ec7a4e04281bbf95df.jpg",'h3':"全品类爆款返场",'h4':"清仓价",'dat':'2017-1-1'},
+			{'href':"",'src':"img/41c75a46f55c125c39aaac425dd5c7a0.jpg",'h3':"新品轰趴",'h4':"全线秋冬鞋服",'dat':'2017-02-14'},
+			{'href':"",'src':"img/60b3113e9b322dbf9cc607b089675c79.jpg",'h3':"嗨购不停",'h4':"全品类",'dat':'2017-1-1'},
+			{'href':"",'src':"img/64a66ee882d8e140253e507ba5089dd8.jpg",'h3':"探路者同价位买二2免1",'h4':"狂high到底",'dat':'2017-02-14'},
+			{'href':"",'src':"img/814d90b0f657b89766a22950ab9a12ee.jpg",'h3':"马克华菲狂欢专场",'h4':"御寒冬装 特惠加持",'dat':'2017-1-1'},
+			{'href':"",'src':"img/2196df6869805c27fd5a06d211b6857c.jpg",'h3':"全家总动员",'h4':"每满199减50元可累计",'dat':'2017-02-14'},
+			{'href':"",'src':"img/6830a7fbe640565f2e200fb43a7ecae8.jpg",'h3':"尖货上新",'h4':"好价不停",'dat':'2017-1-1'},
+			{'href':"",'src':"img/95632af0e517b841c82c9af1f903c27a.jpg",'h3':"秋冬系列",'h4':"复刻经典",'dat':'2017-02-14'},
+			{'href':"",'src':"img/aeee32a13112e0985122e39697ac3de8.jpg",'h3':"驾驭冬季运动",'h4':"新品特惠",'dat':'2017-1-1'},
+			{'href':"",'src':"img/b34d6c1732ee6c013ea40709d7d0a56c.jpg",'h3':"断码清仓",'h4':"好货捡漏",'dat':'2017-02-14'},
+			{'href':"",'src':"img/b7549d82a13c6462bd58a8cdf8603cac.jpg",'h3':"狼爪好价继续",'h4':"3折封顶",'dat':'2017-1-1'},
+			{'href':"",'src':"img/cab5333d2f8e0afe357537714eecac5a.jpg",'h3':"Lee品牌专场",'h4':"牛仔经典 型格暖冬",'dat':'2017-02-14'},
+			{'href':"",'src':"img/dd366701cf8bc64c49a273a689c10ace.jpg",'h3':"乐斯菲斯",'h4':"满699减100",'dat':'2017-1-1'},
+			{'href':"",'src':"img/f0e35fa371dbaa9b4040ae5f0fe2a8b0.jpg",'h3':"鞋服TOP款",'h4':"全品牌",'dat':'2017-02-14'},
+			{'href':"",'src':"img/ff356c1a32ec289a4d08d30c753e44af.jpg",'h3':"我们来拼单",'h4':"同价位凑单",'dat':'2017-1-1'},
+		]
+		for(var j=0;j<jpd.length;j++){
+			shB(jpd[j].href,jpd[j].src,jpd[j].h3,jpd[j].h4,jpd[j].dat)
+		}
+		function shB(ohref,osrc,oh3,oh4,ot){
+			var showB_con=document.getElementsByClassName("showBot_con")[0];
+			var showB=document.createElement("a");
+			showB.href=ohref;
+			showB.className="showB";
+			showB_con.appendChild(showB);
+			var showB_img=document.createElement("img");
+			showB_img.src=osrc;
+			showB.appendChild(showB_img);
+			var showB_div=document.createElement("div");
+			showB_div.className="showB_div";
+			showB.appendChild(showB_div);
+			var showB_h3=document.createElement("h3");
+			showB_h3.className="showB_h3";
+			showB_h3.innerHTML=oh3;
+			showB_div.appendChild(showB_h3);
+			var showB_h4=document.createElement("h4");
+			showB_h4.className="showB_h4";
+			showB_h4.innerHTML=oh4;
+			showB_div.appendChild(showB_h4);
+			var showB_p=document.createElement("p");
+			showB_p.className="showB_p";
+			showB.appendChild(showB_p);
+			var spanB_day=document.createElement("span");
+			showB_p.appendChild(spanB_day);
+			var showB_i=document.createElement("i");
+			showB_i.className="showB_i";
+			spanB_day.appendChild(showB_i);
+			var dayB=document.createElement("span");
+			dayB.innerHTML="天";
+			spanB_day.appendChild(dayB);
+			var spanB_hour=spanB_day.cloneNode(true);
+			spanB_hour.children[1].innerHTML="时";
+			showB_p.appendChild(spanB_hour);
+			var spanB_minu=spanB_day.cloneNode(true);
+			spanB_minu.children[1].innerHTML="分";
+			showB_p.appendChild(spanB_minu);
+			var spanB_sec=spanB_day.cloneNode(true);
+			spanB_sec.children[1].innerHTML="秒";
+			showB_p.appendChild(spanB_sec);
+			var spanB_msec=spanB_day.cloneNode(true);
+			spanB_msec.children[1].innerHTML="";
+			showB_p.appendChild(spanB_msec);
+			setInterval(function(){
+				var arr=countDown(ot);
+				showB_i.innerHTML=arr[0];
+				spanB_hour.children[0].innerHTML=arr[1];
+				spanB_minu.children[0].innerHTML=arr[2];
+				spanB_sec.children[0].innerHTML=arr[3];
+				spanB_msec.children[0].innerHTML=arr[4];
+			
+			},1)
+		}
+	</script>
+	<!-------link----------->
+	<div class="link">
+		<div class="link_top">
+			<div class="link_left">
+				<dl>
+					<dt><img src="img/appqcode_2.png" alt="" /></dt>
+					<dd>
+						<h3>好乐买手机客户端</h3>
+						<p>在任何地方选购自己喜欢的宝贝，随时了解查看物流订单信息，每一环节做到为您所需。</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/weixinqcode.png" alt="" /></dt>
+					<dd class="link_dd">
+						<h3>好乐买官方微信</h3>
+						<p>关注官方微信，订单状态随时查。</p>
+					</dd>
+				</dl>
+				<div>
+					<a href=""><img src="img/qd2.png" alt="" /></a>
+					<a href=""><img src="img/qd2-02.png" alt="" /></a>
+				</div>
+			</div>
+			<div class="link_other">
+				<h3>购物指南</h3>
+				<ul>
+					<li><a href="">购物流程</a></li>
+					<li><a href="">订购方式</a></li>
+					<li><a href="">常见问题</a></li>
+				</ul>
+			</div>
+			<div class="link_other">
+				<h3>配送方式</h3>
+				<ul>
+					<li><a href="">快递配送</a></li>
+					<li><a href="">配送时间</a></li>
+					<li><a href="">验货查收</a></li>
+				</ul>
+			</div>
+			<div class="link_other">
+				<h3>支付方式</h3>
+				<ul>
+					<li><a href="">支付方式</a></li>
+					<li><a href="">代金券</a></li>
+				</ul>
+			</div>
+			<div class="link_other">
+				<h3>售后服务 </h3>
+				<ul>
+					<li><a href="">退换货政策</a></li>
+					<li><a href="">退款说明</a></li>
+					<li><a href="">联系客服</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="link_mid">
+			<img src="img/okbuy1-03.png" alt="" />
+			<img src="img/okbuy1-05.png" alt="" />
+			<img src="img/902c39b52902b3bd4ab500babad4e14a.png" alt="" />
+			<img src="img/bjwj.jpg" alt="" />
+		</div>
+		<div class="link_bottom">
+			<a href="">公司介绍</a>
+			<a href="">成为供应商</a>
+			<a href="">加入我们</a>
+			<a href="">联系我们</a>
+			<a href="">友情链接</a>
+			<a href="">网站联盟</a>
+			<a href="">加入校园代理</a>
+			<a  class="link_bottom_a" href="">集团客户</a>
+		</div>
+	</div>
+	<!--------bottom---------->
+	<div class="bottom">
+		天津好乐买信息技术有限公司    Copyright © 2007-2016 OkBuy.com All Rights Reserved <a href="">津ICP备16005872号-1</a> 京公网安备110105006859   客服电话：400-8610-400 
+	</div>
 </html>
